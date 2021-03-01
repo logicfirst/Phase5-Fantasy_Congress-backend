@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Senator.destroy_all
 User.destroy_all
 Team.destroy_all
-Senator.destroy_all
 Bill.destroy_all
 
 usr1 = User.create(first_name: "Scott", username: "shlee", password: "password", email: "slee@slee.com")
@@ -37,6 +37,7 @@ bill17 = Bill.create(bill_alpha_id: "s474-117", sponsor_id: "B001310", sponsor_n
 bill18 = Bill.create(bill_alpha_id: "s489-117", sponsor_id: "B001310", sponsor_name: "Mike Braun")
 bill19 = Bill.create(bill_alpha_id: "s293-117", sponsor_id: "B001310", sponsor_name: "Mike Braun")
 bill20 = Bill.create(bill_alpha_id: "sres12-117", sponsor_id: "B001310", sponsor_name: "Mike Braun")
+
 
 Senator.create(team_id: tm1.id, bill_id: bill01.id, sen_alpha_id: "B001230")
 Senator.create(team_id: tm1.id, bill_id: bill11.id, sen_alpha_id: "B001288")
