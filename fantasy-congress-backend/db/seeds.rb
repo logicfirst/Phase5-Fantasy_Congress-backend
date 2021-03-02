@@ -43,3 +43,11 @@ Senator.create(team_id: tm1.id, bill_id: bill01.id, sen_alpha_id: "B001230")
 Senator.create(team_id: tm1.id, bill_id: bill11.id, sen_alpha_id: "B001288")
 Senator.create(team_id: tm2.id, bill_id: bill06.id, sen_alpha_id: "B001267")
 Senator.create(team_id: tm2.id, bill_id: bill20.id, sen_alpha_id: "B001310")
+
+# if Senator.count == 0
+#   path = File.join(File.dirname(__FILE__), "./seeds/senators.json")
+#   records = JSON.parse(File.read(path))
+#   records.each do |record|
+#     Senator.create!(record)
+#   end
+# end
