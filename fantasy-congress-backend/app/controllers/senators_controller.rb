@@ -7,7 +7,7 @@ class SenatorsController < ApplicationController
 #   senators = senate_data["results"][0]["members"]
 
   def index
-    render json: Senator.all
+    render json: Senator.all, :include => :team
   end
 
 
