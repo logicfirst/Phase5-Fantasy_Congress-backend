@@ -1,7 +1,7 @@
 class TeamsController < ApplicationController
 
   def index
-    render json: Team.all
+    render json: Team.all, :include => :user
   end
 
   def create
