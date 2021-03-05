@@ -13,9 +13,15 @@ Bill.destroy_all
 
 usr1 = User.create(first_name: "Scott", username: "shlee", password: "password", email: "slee@slee.com")
 usr2 = User.create(first_name: "Norm", username: "nwlee", password: "password", email: "nlee@nlee.com")
+usr3 = User.create(first_name: "George", username: "gwashington", password: "password", email: "gwashington@gwashington.com")
+usr4 = User.create(first_name: "Alexander", username: "ahamilton", password: "password", email: "ahamilton@ahamilton.com")
+usr5 = User.create(first_name: "John", username: "jhancock", password: "password", email: "jhancock@jhancock.com")
 
 tm1 = Team.create(user_id: usr1.id, team_name: "Young Republicans")
 tm2 = Team.create(user_id: usr2.id, team_name: "Old Democrats")
+tm3 = Team.create(user_id: usr3.id, team_name: "Delaware Crosssing")
+tm4 = Team.create(user_id: usr4.id, team_name: "Filibusters")
+tm5 = Team.create(user_id: usr5.id, team_name: "Bill O Rights")
 
 bill01 = Bill.create(bill_alpha_id: "s285-117", sponsor_id: "B001230", sponsor_name: "Tammy Baldwin")
 bill02 = Bill.create(bill_alpha_id: "s287-117", sponsor_id: "B001230", sponsor_name: "Tammy Baldwin")
@@ -4960,7 +4966,7 @@ senators = [
 
 senators.each do |senator|
   Senator.create!(
-      sen_alpha_id: senator[:"id"]
+      sen_alpha_id: senator[:"id"],
       title: senator[:"title"],
       first_name: senator[:"first_name"],
       last_name: senator[:"last_name"],
